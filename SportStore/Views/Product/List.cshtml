@@ -1,0 +1,9 @@
+﻿@model ProductsListViewModel
+@ViewBag.Title
+@foreach (var item in Model.Products)
+{
+    @Html.Partial("ProductSummary", item);
+}
+<div page-model="@Model.PagingInfo" page-action="List" class="btn-group m-1" 
+     page-classes-enabled="true" page-class="btn" page-class-normal="btn-secondary"
+     page-class-selected="btn-primary"page-url-category="@Model.CurrentCategory" ></div>
